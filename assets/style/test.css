@@ -7,13 +7,21 @@ html{
     background-size: cover;
 }
 
+#table img{
+    margin-bottom: -100px;
+}
+
+#table img:last-child{
+    margin-bottom: 0;
+}
+
 img{
     width: 130px;
     height: 175px;
 }
 
 img[title="sound"]{
-    width: 150px;
+    width: 75px;
     height: auto;
 }
 
@@ -34,6 +42,7 @@ header, footer{
 }
 
 #table{
+    height: 75vh;
     align-items: flex-start;
     justify-content: center;
 }
