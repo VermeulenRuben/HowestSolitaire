@@ -89,7 +89,7 @@ CardGame.prototype.takenFromTable =  function (rowIndex, cardIndex) {
     if(this.table[rowIndex][getIndexOfLastFilledItemFromArray(this.table[rowIndex])] === taken){
         let hasPosition = this.findAPosition(taken, false);
         if(hasPosition) {
-            if(!taken.showBack && !(isEmpty(this.table[rowIndex][cardIndex-1])) && this.table[rowIndex][cardIndex].showBack)
+            if(!taken.showBack && !(isEmpty(this.table[rowIndex][cardIndex-1])) && this.table[rowIndex][cardIndex - 1].showBack)
                 this.table[rowIndex][cardIndex-1].flip();
             this.table[rowIndex] = clearElementOfArrayWithIndexOf(this.table[rowIndex], cardIndex)
         }
@@ -124,7 +124,13 @@ CardGame.prototype.findAPosition = function (taken, isFromGiven) {
 
     for (let rowIndex = 0; rowIndex < this.table.length; rowIndex++) {
         let row = this.table[rowIndex];
+        console.log(row[getIndexOfLastFilledItemFromArray(row)]);
         let lastInRow = row[getIndexOfLastFilledItemFromArray(row)];
+        if (lastInRow === undefined && taken.cardnumber === "k"){
+            row[0] = taken;
+            if(isFromGiven) this.takenFromTableCounter++;
+            return true;
+        }
         if (lastInRow.cardnumber === neighbours.predecessor && lastInRow.color === oppositeColor) {
             row[getIndexOfLastFilledItemFromArray(row) + 1] = taken;
             if(isFromGiven) this.takenFromTableCounter++;

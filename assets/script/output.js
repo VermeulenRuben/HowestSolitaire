@@ -14,7 +14,6 @@ function arrayClicked(e) {
     switch (e.currentTarget.id){
         case "given":
             cardGame.takeFromGiven();
-            console.log(cardGame.goal);
             updateOutput();
             break;
         case "deck":
@@ -36,7 +35,7 @@ function arrayClicked(e) {
         cardGame.takenFromTable(rowIndex, cardIndex);
         updateOutput();
     }
-    console.log(cardGame.takenFromTableCounter)
+
 }
 
 function updateOutput() {
@@ -45,9 +44,18 @@ function updateOutput() {
     let elementInnerHTML = "";
     cardGame.table.forEach(function (array, index) {
         elementInnerHTML += "<div id='row" + index + "'>";
-        array.forEach(function (element) {
-            elementInnerHTML += "<img class='card' src='" + element.imgSrc + "' alt='Card'/>";
-        });
+        // I did not use forEach method because I wanted all the elements including the empty ones
+        let emptyCounter = 0;
+        for(let i = 0; i < array.length; i++){
+            if(isEmpty(array[i])) emptyCounter++;
+        }
+        if(emptyCounter !== array.length){
+            array.forEach(function (element, index) {
+                elementInnerHTML += "<img class='card' src='" + element.imgSrc + "' alt='Card'/>";
+            });
+        } else {
+            elementInnerHTML += "<img class='card' src='../HowestSolitaire/images/cards/error.png' alt='Card'/>"
+        }
         elementInnerHTML += "</div>"
     });
     document.getElementById('table').innerHTML = elementInnerHTML;

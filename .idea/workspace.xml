@@ -4,6 +4,7 @@
     <list default="true" id="4d52ad03-7850-4af2-92e3-5744fbd32c0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/script/card.js" afterPath="$PROJECT_DIR$/assets/script/card.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/script/output.js" afterPath="$PROJECT_DIR$/assets/script/output.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,9 +28,29 @@
       <file leaf-file-name="output.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/script/output.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+            <state relative-caret-position="68">
+              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="card.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/script/card.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="626">
+              <caret line="131" column="24" lean-forward="false" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
+              <folding>
+                <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
+                <element signature="n#!!block;n#Card#0" expanded="false" />
+                <element signature="e#945#1085#0" expanded="false" />
+                <element signature="e#1121#1201#0" expanded="false" />
+                <element signature="e#1241#1392#0" expanded="false" />
+                <element signature="e#1799#2184#0" expanded="false" />
+                <element signature="e#2232#2401#0" expanded="false" />
+                <element signature="e#2456#2709#0" expanded="false" />
+                <element signature="e#5063#6605#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,27 +61,6 @@
             <state relative-caret-position="748">
               <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="card.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/script/card.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!block;n#isEmpty#0" expanded="false" />
-                <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
-                <element signature="n#!!block;n#Card#0" expanded="false" />
-                <element signature="e#945#1085#0" expanded="false" />
-                <element signature="e#1121#1201#0" expanded="false" />
-                <element signature="e#1241#1392#0" expanded="false" />
-                <element signature="e#1799#2184#0" expanded="false" />
-                <element signature="e#2232#2401#0" expanded="false" />
-                <element signature="e#2456#2709#0" expanded="false" />
-                <element signature="e#4806#6348#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -87,8 +87,8 @@
       <find>flip</find>
       <find>lastin</find>
       <find>las</find>
-      <find>console</find>
       <find>conso</find>
+      <find>console</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,9 +107,9 @@
         <option value="$PROJECT_DIR$/assets/test.css" />
         <option value="$PROJECT_DIR$/start.html" />
         <option value="$PROJECT_DIR$/in-game.html" />
-        <option value="$PROJECT_DIR$/assets/script/output.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/style/test.css" />
+        <option value="$PROJECT_DIR$/assets/script/output.js" />
         <option value="$PROJECT_DIR$/assets/script/card.js" />
       </list>
     </option>
@@ -152,8 +152,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,6 +179,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,11 +249,12 @@
       <workItem from="1526722344117" duration="17800000" />
       <workItem from="1526748041096" duration="3900000" />
       <workItem from="1526763647817" duration="134000" />
+      <workItem from="1526764005685" duration="2479000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116187000" />
+    <option name="totallyTimeSpent" value="118666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
@@ -320,7 +321,6 @@
         <state relative-caret-position="1139">
           <caret line="67" column="29" lean-forward="false" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
           <folding>
-            <element signature="n#!!block;n#isEmpty#0" expanded="false" />
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
             <element signature="e#945#1085#0" expanded="false" />
@@ -329,7 +329,7 @@
             <element signature="e#1799#2184#0" expanded="false" />
             <element signature="e#2232#2401#0" expanded="false" />
             <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#4806#6348#0" expanded="false" />
+            <element signature="e#5063#6605#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -372,7 +372,6 @@
         <state relative-caret-position="1989">
           <caret line="117" column="2" lean-forward="false" selection-start-line="117" selection-start-column="2" selection-end-line="117" selection-end-column="2" />
           <folding>
-            <element signature="n#!!block;n#isEmpty#0" expanded="false" />
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
             <element signature="e#945#1085#0" expanded="false" />
@@ -381,7 +380,7 @@
             <element signature="e#1799#2184#0" expanded="false" />
             <element signature="e#2232#2401#0" expanded="false" />
             <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#4806#6348#0" expanded="false" />
+            <element signature="e#5063#6605#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -429,7 +428,6 @@
         <state relative-caret-position="1955">
           <caret line="115" column="2" lean-forward="false" selection-start-line="115" selection-start-column="2" selection-end-line="115" selection-end-column="2" />
           <folding>
-            <element signature="n#!!block;n#isEmpty#0" expanded="false" />
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
             <element signature="e#945#1085#0" expanded="false" />
@@ -438,7 +436,7 @@
             <element signature="e#1799#2184#0" expanded="false" />
             <element signature="e#2232#2401#0" expanded="false" />
             <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#4806#6348#0" expanded="false" />
+            <element signature="e#5063#6605#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -471,7 +469,6 @@
         <state relative-caret-position="1547">
           <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#isEmpty#0" expanded="false" />
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
             <element signature="e#945#1085#0" expanded="false" />
@@ -480,7 +477,7 @@
             <element signature="e#1799#2184#0" expanded="false" />
             <element signature="e#2232#2401#0" expanded="false" />
             <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#4806#6348#0" expanded="false" />
+            <element signature="e#5063#6605#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -507,7 +504,6 @@
         <state relative-caret-position="272">
           <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding>
-            <element signature="n#!!block;n#isEmpty#0" expanded="false" />
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
             <element signature="e#945#1085#0" expanded="false" />
@@ -516,7 +512,7 @@
             <element signature="e#1799#2184#0" expanded="false" />
             <element signature="e#2232#2401#0" expanded="false" />
             <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#4806#6348#0" expanded="false" />
+            <element signature="e#5063#6605#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -556,7 +552,6 @@
         <state relative-caret-position="272">
           <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding>
-            <element signature="n#!!block;n#isEmpty#0" expanded="false" />
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
             <element signature="e#945#1085#0" expanded="false" />
@@ -565,7 +560,7 @@
             <element signature="e#1799#2184#0" expanded="false" />
             <element signature="e#2232#2401#0" expanded="false" />
             <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#4806#6348#0" expanded="false" />
+            <element signature="e#5063#6605#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -606,7 +601,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#isEmpty#0" expanded="false" />
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
             <element signature="e#945#1085#0" expanded="false" />
@@ -615,7 +609,7 @@
             <element signature="e#1799#2184#0" expanded="false" />
             <element signature="e#2232#2401#0" expanded="false" />
             <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#4806#6348#0" expanded="false" />
+            <element signature="e#5063#6605#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -636,6 +630,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/style/test.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -646,26 +648,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/script/output.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/style/test.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        <state relative-caret-position="68">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/script/card.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        <state relative-caret-position="626">
+          <caret line="131" column="24" lean-forward="false" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
           <folding>
-            <element signature="n#!!block;n#isEmpty#0" expanded="false" />
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
             <element signature="e#945#1085#0" expanded="false" />
@@ -674,7 +667,7 @@
             <element signature="e#1799#2184#0" expanded="false" />
             <element signature="e#2232#2401#0" expanded="false" />
             <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#4806#6348#0" expanded="false" />
+            <element signature="e#5063#6605#0" expanded="false" />
           </folding>
         </state>
       </provider>
