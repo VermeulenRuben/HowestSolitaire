@@ -89,8 +89,7 @@ CardGame.prototype.takenFromTable =  function (rowIndex, cardIndex) {
     if(this.table[rowIndex][getIndexOfLastFilledItemFromArray(this.table[rowIndex])] === taken){
         let hasPosition = this.findAPosition(taken, false);
         if(hasPosition) {
-            console.log(taken);
-            if(!taken.showBack && !(isEmpty(this.table[rowIndex][cardIndex-1])))
+            if(!taken.showBack && !(isEmpty(this.table[rowIndex][cardIndex-1])) && this.table[rowIndex][cardIndex].showBack)
                 this.table[rowIndex][cardIndex-1].flip();
             this.table[rowIndex] = clearElementOfArrayWithIndexOf(this.table[rowIndex], cardIndex)
         }
