@@ -42,7 +42,7 @@ header, footer{
 }
 
 #table{
-    height: 75vh;
+    min-height: 75vh;
     align-items: flex-start;
     justify-content: center;
 }
