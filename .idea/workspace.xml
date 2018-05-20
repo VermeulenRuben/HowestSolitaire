@@ -38,8 +38,13 @@
       <file leaf-file-name="card.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/script/card.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="544">
               <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+=======
+            <state relative-caret-position="601">
+              <caret line="159" column="50" lean-forward="false" selection-start-line="159" selection-start-column="50" selection-end-line="159" selection-end-column="50" />
+>>>>>>> gh-pages
               <folding>
                 <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
                 <element signature="n#!!block;n#Card#0" expanded="false" />
@@ -53,8 +58,12 @@
                 <element signature="e#2483#2736#0" expanded="false" />
                 <element signature="e#2807#4061#0" expanded="false" />
                 <element signature="e#4111#4384#0" expanded="false" />
+<<<<<<< HEAD
                 <element signature="e#4460#6973#0" expanded="false" />
                 <element signature="e#7014#8556#0" expanded="false" />
+=======
+                <element signature="e#6967#8509#0" expanded="false" />
+>>>>>>> gh-pages
               </folding>
             </state>
           </provider>
@@ -258,12 +267,20 @@
       <workItem from="1526763647817" duration="134000" />
       <workItem from="1526764005685" duration="2594000" />
       <workItem from="1526801618862" duration="9339000" />
+<<<<<<< HEAD
       <workItem from="1526811279951" duration="2276000" />
+=======
+      <workItem from="1526811279951" duration="1556000" />
+>>>>>>> gh-pages
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="130396000" />
+=======
+    <option name="totallyTimeSpent" value="129676000" />
+>>>>>>> gh-pages
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -296,7 +313,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+<<<<<<< HEAD
       <option name="time" value="6" />
+=======
+      <option name="time" value="5" />
+>>>>>>> gh-pages
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -344,8 +365,12 @@
             <element signature="e#2483#2736#0" expanded="false" />
             <element signature="e#2807#4061#0" expanded="false" />
             <element signature="e#4111#4384#0" expanded="false" />
+<<<<<<< HEAD
             <element signature="e#4460#6973#0" expanded="false" />
             <element signature="e#7014#8556#0" expanded="false" />
+=======
+            <element signature="e#6967#8509#0" expanded="false" />
+>>>>>>> gh-pages
           </folding>
         </state>
       </provider>
@@ -400,8 +425,12 @@
             <element signature="e#2483#2736#0" expanded="false" />
             <element signature="e#2807#4061#0" expanded="false" />
             <element signature="e#4111#4384#0" expanded="false" />
+<<<<<<< HEAD
             <element signature="e#4460#6973#0" expanded="false" />
             <element signature="e#7014#8556#0" expanded="false" />
+=======
+            <element signature="e#6967#8509#0" expanded="false" />
+>>>>>>> gh-pages
           </folding>
         </state>
       </provider>
@@ -461,8 +490,12 @@
             <element signature="e#2483#2736#0" expanded="false" />
             <element signature="e#2807#4061#0" expanded="false" />
             <element signature="e#4111#4384#0" expanded="false" />
+<<<<<<< HEAD
             <element signature="e#4460#6973#0" expanded="false" />
             <element signature="e#7014#8556#0" expanded="false" />
+=======
+            <element signature="e#6967#8509#0" expanded="false" />
+>>>>>>> gh-pages
           </folding>
         </state>
       </provider>
@@ -507,8 +540,12 @@
             <element signature="e#2483#2736#0" expanded="false" />
             <element signature="e#2807#4061#0" expanded="false" />
             <element signature="e#4111#4384#0" expanded="false" />
+<<<<<<< HEAD
             <element signature="e#4460#6973#0" expanded="false" />
             <element signature="e#7014#8556#0" expanded="false" />
+=======
+            <element signature="e#6967#8509#0" expanded="false" />
+>>>>>>> gh-pages
           </folding>
         </state>
       </provider>
@@ -547,8 +584,12 @@
             <element signature="e#2483#2736#0" expanded="false" />
             <element signature="e#2807#4061#0" expanded="false" />
             <element signature="e#4111#4384#0" expanded="false" />
+<<<<<<< HEAD
             <element signature="e#4460#6973#0" expanded="false" />
             <element signature="e#7014#8556#0" expanded="false" />
+=======
+            <element signature="e#6967#8509#0" expanded="false" />
+>>>>>>> gh-pages
           </folding>
         </state>
       </provider>
@@ -600,8 +641,12 @@
             <element signature="e#2483#2736#0" expanded="false" />
             <element signature="e#2807#4061#0" expanded="false" />
             <element signature="e#4111#4384#0" expanded="false" />
+<<<<<<< HEAD
             <element signature="e#4460#6973#0" expanded="false" />
             <element signature="e#7014#8556#0" expanded="false" />
+=======
+            <element signature="e#6967#8509#0" expanded="false" />
+>>>>>>> gh-pages
           </folding>
         </state>
       </provider>
@@ -654,8 +699,12 @@
             <element signature="e#2483#2736#0" expanded="false" />
             <element signature="e#2807#4061#0" expanded="false" />
             <element signature="e#4111#4384#0" expanded="false" />
+<<<<<<< HEAD
             <element signature="e#4460#6973#0" expanded="false" />
             <element signature="e#7014#8556#0" expanded="false" />
+=======
+            <element signature="e#6967#8509#0" expanded="false" />
+>>>>>>> gh-pages
           </folding>
         </state>
       </provider>
@@ -704,8 +753,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/script/card.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="544">
           <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+=======
+        <state relative-caret-position="601">
+          <caret line="159" column="50" lean-forward="false" selection-start-line="159" selection-start-column="50" selection-end-line="159" selection-end-column="50" />
+>>>>>>> gh-pages
           <folding>
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
@@ -719,8 +773,12 @@
             <element signature="e#2483#2736#0" expanded="false" />
             <element signature="e#2807#4061#0" expanded="false" />
             <element signature="e#4111#4384#0" expanded="false" />
+<<<<<<< HEAD
             <element signature="e#4460#6973#0" expanded="false" />
             <element signature="e#7014#8556#0" expanded="false" />
+=======
+            <element signature="e#6967#8509#0" expanded="false" />
+>>>>>>> gh-pages
           </folding>
         </state>
       </provider>
