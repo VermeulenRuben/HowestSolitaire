@@ -159,7 +159,7 @@ CardGame.prototype.findAPosition = function (taken, isFromGiven = false) {
             if (lastInRow === undefined) {
                 if (taken[0].cardnumber === "k") {
                     for (let i = 0; i < row.length; i++) {
-                        row[i] = taken[i]
+                        if(taken[i] !== undefined)row[i] = taken[i]
                     }
                     return true;
                 }
