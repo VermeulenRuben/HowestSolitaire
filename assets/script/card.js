@@ -117,7 +117,7 @@ CardGame.prototype.takeFromGiven = function () {
 };
 
 CardGame.prototype.findAPosition = function (taken, isFromGiven = false) {
-    if(typeof taken[0] !== "object") {
+    if(taken !== undefined && typeof taken[0] !== "object") {
         let oppositeColor = (taken.color === "red") ? "black" : "red";
         let neighbours = this.findNeighbours(taken);
 
@@ -149,7 +149,7 @@ CardGame.prototype.findAPosition = function (taken, isFromGiven = false) {
                 return true;
             }
         }
-    }else{
+    }else if(taken !== undefined){
         let oppositeColor = (taken[0].color === "red") ? "black" : "red";
         let neighbours = this.findNeighbours(taken[0]);
 
