@@ -4,7 +4,7 @@
     <list default="true" id="4d52ad03-7850-4af2-92e3-5744fbd32c0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/script/card.js" afterPath="$PROJECT_DIR$/assets/script/card.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/script/output.js" afterPath="$PROJECT_DIR$/assets/script/output.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/style/test.css" afterPath="$PROJECT_DIR$/assets/style/test.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -28,28 +28,32 @@
       <file leaf-file-name="output.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/script/output.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="527">
+              <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+              <folding>
+                <element signature="n#!!block;n#updateOutput#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="card.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/script/card.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="131" column="24" lean-forward="false" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
+            <state relative-caret-position="566">
+              <caret line="104" column="73" lean-forward="false" selection-start-line="104" selection-start-column="73" selection-end-line="104" selection-end-column="73" />
               <folding>
                 <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
                 <element signature="n#!!block;n#Card#0" expanded="false" />
-                <element signature="e#945#1085#0" expanded="false" />
-                <element signature="e#1121#1201#0" expanded="false" />
-                <element signature="e#1241#1392#0" expanded="false" />
-                <element signature="e#1799#2184#0" expanded="false" />
-                <element signature="e#2232#2401#0" expanded="false" />
-                <element signature="e#2456#2709#0" expanded="false" />
-                <element signature="e#5063#6605#0" expanded="false" />
+                <element signature="e#972#1112#0" expanded="false" />
+                <element signature="e#1148#1228#0" expanded="false" />
+                <element signature="e#1268#1419#0" expanded="false" />
+                <element signature="e#1826#2211#0" expanded="false" />
+                <element signature="e#2259#2428#0" expanded="false" />
+                <element signature="e#2483#2736#0" expanded="false" />
+                <element signature="e#4111#4384#0" expanded="false" />
+                <element signature="e#4460#6900#0" expanded="false" />
+                <element signature="e#6941#8483#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -58,8 +62,8 @@
       <file leaf-file-name="test.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/style/test.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+            <state relative-caret-position="595">
+              <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -87,8 +91,9 @@
       <find>flip</find>
       <find>lastin</find>
       <find>las</find>
-      <find>conso</find>
       <find>console</find>
+      <find>conso</find>
+      <find>findApos</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -108,8 +113,8 @@
         <option value="$PROJECT_DIR$/start.html" />
         <option value="$PROJECT_DIR$/in-game.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/assets/style/test.css" />
         <option value="$PROJECT_DIR$/assets/script/output.js" />
+        <option value="$PROJECT_DIR$/assets/style/test.css" />
         <option value="$PROJECT_DIR$/assets/script/card.js" />
       </list>
     </option>
@@ -131,8 +136,9 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="850" />
+    <option name="y" value="-13" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -152,6 +158,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -179,7 +186,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -249,18 +255,20 @@
       <workItem from="1526722344117" duration="17800000" />
       <workItem from="1526748041096" duration="3900000" />
       <workItem from="1526763647817" duration="134000" />
-      <workItem from="1526764005685" duration="2479000" />
+      <workItem from="1526764005685" duration="2594000" />
+      <workItem from="1526801618862" duration="9339000" />
+      <workItem from="1526811279951" duration="13000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118666000" />
+    <option name="totallyTimeSpent" value="128133000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20563674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.102604166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -287,7 +295,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -304,7 +312,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#!!block;n#updateOutput#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -323,13 +333,15 @@
           <folding>
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
-            <element signature="e#945#1085#0" expanded="false" />
-            <element signature="e#1121#1201#0" expanded="false" />
-            <element signature="e#1241#1392#0" expanded="false" />
-            <element signature="e#1799#2184#0" expanded="false" />
-            <element signature="e#2232#2401#0" expanded="false" />
-            <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#5063#6605#0" expanded="false" />
+            <element signature="e#972#1112#0" expanded="false" />
+            <element signature="e#1148#1228#0" expanded="false" />
+            <element signature="e#1268#1419#0" expanded="false" />
+            <element signature="e#1826#2211#0" expanded="false" />
+            <element signature="e#2259#2428#0" expanded="false" />
+            <element signature="e#2483#2736#0" expanded="false" />
+            <element signature="e#4111#4384#0" expanded="false" />
+            <element signature="e#4460#6900#0" expanded="false" />
+            <element signature="e#6941#8483#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -374,13 +386,15 @@
           <folding>
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
-            <element signature="e#945#1085#0" expanded="false" />
-            <element signature="e#1121#1201#0" expanded="false" />
-            <element signature="e#1241#1392#0" expanded="false" />
-            <element signature="e#1799#2184#0" expanded="false" />
-            <element signature="e#2232#2401#0" expanded="false" />
-            <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#5063#6605#0" expanded="false" />
+            <element signature="e#972#1112#0" expanded="false" />
+            <element signature="e#1148#1228#0" expanded="false" />
+            <element signature="e#1268#1419#0" expanded="false" />
+            <element signature="e#1826#2211#0" expanded="false" />
+            <element signature="e#2259#2428#0" expanded="false" />
+            <element signature="e#2483#2736#0" expanded="false" />
+            <element signature="e#4111#4384#0" expanded="false" />
+            <element signature="e#4460#6900#0" expanded="false" />
+            <element signature="e#6941#8483#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -430,13 +444,15 @@
           <folding>
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
-            <element signature="e#945#1085#0" expanded="false" />
-            <element signature="e#1121#1201#0" expanded="false" />
-            <element signature="e#1241#1392#0" expanded="false" />
-            <element signature="e#1799#2184#0" expanded="false" />
-            <element signature="e#2232#2401#0" expanded="false" />
-            <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#5063#6605#0" expanded="false" />
+            <element signature="e#972#1112#0" expanded="false" />
+            <element signature="e#1148#1228#0" expanded="false" />
+            <element signature="e#1268#1419#0" expanded="false" />
+            <element signature="e#1826#2211#0" expanded="false" />
+            <element signature="e#2259#2428#0" expanded="false" />
+            <element signature="e#2483#2736#0" expanded="false" />
+            <element signature="e#4111#4384#0" expanded="false" />
+            <element signature="e#4460#6900#0" expanded="false" />
+            <element signature="e#6941#8483#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -471,13 +487,15 @@
           <folding>
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
-            <element signature="e#945#1085#0" expanded="false" />
-            <element signature="e#1121#1201#0" expanded="false" />
-            <element signature="e#1241#1392#0" expanded="false" />
-            <element signature="e#1799#2184#0" expanded="false" />
-            <element signature="e#2232#2401#0" expanded="false" />
-            <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#5063#6605#0" expanded="false" />
+            <element signature="e#972#1112#0" expanded="false" />
+            <element signature="e#1148#1228#0" expanded="false" />
+            <element signature="e#1268#1419#0" expanded="false" />
+            <element signature="e#1826#2211#0" expanded="false" />
+            <element signature="e#2259#2428#0" expanded="false" />
+            <element signature="e#2483#2736#0" expanded="false" />
+            <element signature="e#4111#4384#0" expanded="false" />
+            <element signature="e#4460#6900#0" expanded="false" />
+            <element signature="e#6941#8483#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -506,13 +524,15 @@
           <folding>
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
-            <element signature="e#945#1085#0" expanded="false" />
-            <element signature="e#1121#1201#0" expanded="false" />
-            <element signature="e#1241#1392#0" expanded="false" />
-            <element signature="e#1799#2184#0" expanded="false" />
-            <element signature="e#2232#2401#0" expanded="false" />
-            <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#5063#6605#0" expanded="false" />
+            <element signature="e#972#1112#0" expanded="false" />
+            <element signature="e#1148#1228#0" expanded="false" />
+            <element signature="e#1268#1419#0" expanded="false" />
+            <element signature="e#1826#2211#0" expanded="false" />
+            <element signature="e#2259#2428#0" expanded="false" />
+            <element signature="e#2483#2736#0" expanded="false" />
+            <element signature="e#4111#4384#0" expanded="false" />
+            <element signature="e#4460#6900#0" expanded="false" />
+            <element signature="e#6941#8483#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -554,13 +574,15 @@
           <folding>
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
-            <element signature="e#945#1085#0" expanded="false" />
-            <element signature="e#1121#1201#0" expanded="false" />
-            <element signature="e#1241#1392#0" expanded="false" />
-            <element signature="e#1799#2184#0" expanded="false" />
-            <element signature="e#2232#2401#0" expanded="false" />
-            <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#5063#6605#0" expanded="false" />
+            <element signature="e#972#1112#0" expanded="false" />
+            <element signature="e#1148#1228#0" expanded="false" />
+            <element signature="e#1268#1419#0" expanded="false" />
+            <element signature="e#1826#2211#0" expanded="false" />
+            <element signature="e#2259#2428#0" expanded="false" />
+            <element signature="e#2483#2736#0" expanded="false" />
+            <element signature="e#4111#4384#0" expanded="false" />
+            <element signature="e#4460#6900#0" expanded="false" />
+            <element signature="e#6941#8483#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -603,13 +625,15 @@
           <folding>
             <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
             <element signature="n#!!block;n#Card#0" expanded="false" />
-            <element signature="e#945#1085#0" expanded="false" />
-            <element signature="e#1121#1201#0" expanded="false" />
-            <element signature="e#1241#1392#0" expanded="false" />
-            <element signature="e#1799#2184#0" expanded="false" />
-            <element signature="e#2232#2401#0" expanded="false" />
-            <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#5063#6605#0" expanded="false" />
+            <element signature="e#972#1112#0" expanded="false" />
+            <element signature="e#1148#1228#0" expanded="false" />
+            <element signature="e#1268#1419#0" expanded="false" />
+            <element signature="e#1826#2211#0" expanded="false" />
+            <element signature="e#2259#2428#0" expanded="false" />
+            <element signature="e#2483#2736#0" expanded="false" />
+            <element signature="e#4111#4384#0" expanded="false" />
+            <element signature="e#4460#6900#0" expanded="false" />
+            <element signature="e#6941#8483#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -630,11 +654,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/script/output.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+          <folding>
+            <element signature="n#!!block;n#updateOutput#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/style/test.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        <state relative-caret-position="595">
+          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/script/card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="104" column="73" lean-forward="false" selection-start-line="104" selection-start-column="73" selection-end-line="104" selection-end-column="73" />
+          <folding>
+            <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
+            <element signature="n#!!block;n#Card#0" expanded="false" />
+            <element signature="e#972#1112#0" expanded="false" />
+            <element signature="e#1148#1228#0" expanded="false" />
+            <element signature="e#1268#1419#0" expanded="false" />
+            <element signature="e#1826#2211#0" expanded="false" />
+            <element signature="e#2259#2428#0" expanded="false" />
+            <element signature="e#2483#2736#0" expanded="false" />
+            <element signature="e#4111#4384#0" expanded="false" />
+            <element signature="e#4460#6900#0" expanded="false" />
+            <element signature="e#6941#8483#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -643,32 +697,6 @@
         <state relative-caret-position="102">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/script/output.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/script/card.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="131" column="24" lean-forward="false" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!block;n#getIndexOfLastFilledItemFromArray#0" expanded="false" />
-            <element signature="n#!!block;n#Card#0" expanded="false" />
-            <element signature="e#945#1085#0" expanded="false" />
-            <element signature="e#1121#1201#0" expanded="false" />
-            <element signature="e#1241#1392#0" expanded="false" />
-            <element signature="e#1799#2184#0" expanded="false" />
-            <element signature="e#2232#2401#0" expanded="false" />
-            <element signature="e#2456#2709#0" expanded="false" />
-            <element signature="e#5063#6605#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

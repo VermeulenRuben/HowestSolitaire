@@ -2,10 +2,10 @@ function isEmpty(element) {
     return element === undefined || element === null
 }
 
-function clearElementOfArrayWithIndexOf(array, index) {
+function clearElementOfArrayWithIndexOf(array, index, chainLength = 1) {
     let len = array.length;
     let newArray = new Array(len);
-    array.splice(index, 1);
+    array.splice(index, chainLength);
     array.forEach(function (element, index) {
         newArray[index] = element
     });
@@ -87,14 +87,25 @@ CardGame.prototype.findNeighbours = function (card) {
 CardGame.prototype.takenFromTable =  function (rowIndex, cardIndex) {
     let taken = this.table[rowIndex][cardIndex];
     if(this.table[rowIndex][getIndexOfLastFilledItemFromArray(this.table[rowIndex])] === taken){
-        let hasPosition = this.findAPosition(taken, false);
+        let hasPosition = this.findAPosition(taken);
         if(hasPosition) {
             if(!taken.showBack && !(isEmpty(this.table[rowIndex][cardIndex-1])) && this.table[rowIndex][cardIndex - 1].showBack)
                 this.table[rowIndex][cardIndex-1].flip();
             this.table[rowIndex] = clearElementOfArrayWithIndexOf(this.table[rowIndex], cardIndex)
         }
-    }else{
-
+    }else if(!taken.showBack){
+        let takenChain = [];
+        for (let i = cardIndex;  i < this.table[rowIndex].length; i++){
+            if(!isEmpty(this.table[rowIndex][i])) takenChain.push(this.table[rowIndex][i])
+        }
+        let hasPosition = this.findAPosition(takenChain);
+        if(hasPosition){
+            if(!taken.showBack && !(isEmpty(this.table[rowIndex][cardIndex-1])) && this.table[rowIndex][cardIndex - 1].showBack)
+                this.table[rowIndex][cardIndex-1].flip();
+            for(let i = cardIndex; i < this.table[rowIndex].length; i++){
+                this.table[rowIndex] = clearElementOfArrayWithIndexOf(this.table[rowIndex], cardIndex, takenChain.length);
+            }
+        }
     }
 };
 
@@ -105,36 +116,61 @@ CardGame.prototype.takeFromGiven = function () {
     if (hasPosition) this.given[getIndexOfLastFilledItemFromArray(this.given)] = undefined;
 };
 
-CardGame.prototype.findAPosition = function (taken, isFromGiven) {
-    let oppositeColor = (taken.color === "red") ? "black" : "red";
-    let neighbours = this.findNeighbours(taken);
+CardGame.prototype.findAPosition = function (taken, isFromGiven = false) {
+    if(typeof taken[0] !== "object") {
+        let oppositeColor = (taken.color === "red") ? "black" : "red";
+        let neighbours = this.findNeighbours(taken);
 
-    for (let goalCardIndex = 0; goalCardIndex < this.goal.length; goalCardIndex++) {
-        let goalCard = this.goal[goalCardIndex];
+        for (let goalCardIndex = 0; goalCardIndex < this.goal.length; goalCardIndex++) {
+            let goalCard = this.goal[goalCardIndex];
 
-        if (((isEmpty(goalCard)) && taken.cardnumber === "a") ||
-            (!(isEmpty(goalCard)) && goalCard.cardnumber === neighbours.successor && goalCard.category === taken.category)
-        ){
-            this.goal[goalCardIndex] = taken;
-            if(isFromGiven) this.takenFromTableCounter++;
-            return true;
+            if (((isEmpty(goalCard)) && taken.cardnumber === "a") ||
+                (!(isEmpty(goalCard)) && goalCard.cardnumber === neighbours.successor && goalCard.category === taken.category)
+            ) {
+                this.goal[goalCardIndex] = taken;
+                if (isFromGiven) this.takenFromTableCounter++;
+                return true;
+            }
         }
-    }
 
 
-    for (let rowIndex = 0; rowIndex < this.table.length; rowIndex++) {
-        let row = this.table[rowIndex];
-        console.log(row[getIndexOfLastFilledItemFromArray(row)]);
-        let lastInRow = row[getIndexOfLastFilledItemFromArray(row)];
-        if (lastInRow === undefined && taken.cardnumber === "k"){
-            row[0] = taken;
-            if(isFromGiven) this.takenFromTableCounter++;
-            return true;
+        for (let rowIndex = 0; rowIndex < this.table.length; rowIndex++) {
+            let row = this.table[rowIndex];
+            let lastInRow = row[getIndexOfLastFilledItemFromArray(row)];
+            if (lastInRow === undefined) {
+                if (taken.cardnumber === "k") {
+                    row[0] = taken;
+                    if (isFromGiven) this.takenFromTableCounter++;
+                    return true;
+                }
+            } else if (lastInRow.cardnumber === neighbours.predecessor && lastInRow.color === oppositeColor) {
+                row[getIndexOfLastFilledItemFromArray(row) + 1] = taken;
+                if (isFromGiven) this.takenFromTableCounter++;
+                return true;
+            }
         }
-        if (lastInRow.cardnumber === neighbours.predecessor && lastInRow.color === oppositeColor) {
-            row[getIndexOfLastFilledItemFromArray(row) + 1] = taken;
-            if(isFromGiven) this.takenFromTableCounter++;
-            return true;
+    }else{
+        let oppositeColor = (taken[0].color === "red") ? "black" : "red";
+        let neighbours = this.findNeighbours(taken[0]);
+
+        for (let rowIndex = 0; rowIndex < this.table.length; rowIndex++) {
+            let row = this.table[rowIndex];
+            let lastInRow = row[getIndexOfLastFilledItemFromArray(row)];
+            if (lastInRow === undefined) {
+                if (taken[0].cardnumber === "k") {
+                    for (let i = 0; i < row.length; i++) {
+                        row[i] = taken[i]
+                    }
+                    return true;
+                }
+            } else if (lastInRow.cardnumber === neighbours.predecessor && lastInRow.color === oppositeColor) {
+                let chainIndex = 0;
+                for(let i = getIndexOfLastFilledItemFromArray(row) + 1; chainIndex < taken.length; i++){
+                    row[i] = taken[chainIndex];
+                    chainIndex++;
+                }
+                return true;
+            }
         }
     }
 };

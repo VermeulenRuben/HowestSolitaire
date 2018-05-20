@@ -32,7 +32,7 @@ img[title="sound"]{
 #table, header, footer{
     border: solid 3px black;
     border-radius: 20px;
-    background-color: red;
+    background-color: darkolivegreen;
     display: flex;
     padding: 2%;
 }
