@@ -1,13 +1,44 @@
-cardGame = new CardGame();
+let cardGame = new CardGame();
 cardGame.init();
+
+
 
 function arrayOutput(element, name) {
     let outputContainer = document.getElementById(name);
-    let img = "<img class='card' src='../HowestSolitaire/images/cards/error.png' alt='Card'/>"
+    let img = "<img class='card' src='../HowestSolitaire/images/cards/error.png' alt='Card'/>";
     if(element !== undefined){
         img = "<img class='card' src='" + element.imgSrc + "' alt='Card'/>"
     }
     outputContainer.innerHTML = img;
+}
+
+function showPopUp(message, defaultMode = true) {
+    let body = document.getElementsByTagName("body")[0].innerHTML;
+    let popUpOuterHTML =
+        '<div id="popUp">' +
+        '<div id="popUpContent">' +
+        '<span class="close">&times;</span>' +
+        '<p>' + message + '</p>' +
+        '<button id="restart">Restart</button>'+
+        !defaultMode ? '<button id="continue">Continue</button>' : '' +
+        '</div>' +
+        '</div>';
+    document.getElementsByTagName("body")[0].innerHTML = popUpOuterHTML + body;
+    document.getElementsByClassName("close")[0].addEventListener("click", closePopUp);
+    document.getElementById("restart").addEventListener("click", newGame);
+    document.getElementById("continue").addEventListener("click", continueLastGame)
+}
+
+function closePopUp(event) {
+    document.getElementsByTagName("body")[0].removeChild(document.querySelector('#popUp'))
+    eventHandler();
+}
+
+function newGame() {
+    cardGame = new CardGame();
+    cardGame.init();
+    updateOutput();
+    closePopUp();
 }
 
 function arrayClicked(e) {
@@ -64,6 +95,15 @@ function updateOutput() {
         elementInnerHTML += "<div id='set" + index + "'><img src='" + card.imgSrc + "' alt='Card'/></div>"
     });
     document.getElementById('goal').innerHTML = elementInnerHTML;
+
+    let allGoalCardNumbers = [];
+    cardGame.goal.forEach(card => allGoalCardNumbers.push(card.cardnumber));
+    allGoalCardNumbers.map(number => number === "k");
+    if(allGoalCardNumbers[0] && allGoalCardNumbers[1] &&
+        allGoalCardNumbers[2] && allGoalCardNumbers[3])
+        showPopUp("Congratulations. You won");
+
+    storeCardGame(cardGame);
     eventHandler();
 }
 
@@ -80,4 +120,3 @@ function eventHandler() {
 }
 
 updateOutput();
-

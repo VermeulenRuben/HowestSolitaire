@@ -3,10 +3,12 @@ const OFFLINE_FUNDAMENTALS =
     [
         'index.html',
         'assets/style/screen.css',
+        'assets/script/sound.js',
+        'assets/script/localforage/localforage.js',
+        'assets/script/storage.js',
         'assets/script/card.js',
         'assets/script/output.js',
         'assets/script/swReg.js',
-        'assets/script/sound.js',
 
         'audio/fx/click.mp3',
         'audio/bgm.mp3',
@@ -103,16 +105,16 @@ self.addEventListener('fetch', function (event) {
                     .then(fetchedFromNetwork, unableToResolve)
                     .catch(unableToResolve);
                 let offOrOnline = cached ? '(cached)' : '(network)';
-                ServiceWorkerSays("fetch event " + offOrOnline + " " + event.request.url);
+                //ServiceWorkerSays("fetch event " + offOrOnline + " " + event.request.url);
                 return cached || networked;
 
                 function fetchedFromNetwork(response) {
                     let cacheCopy = response.clone();
-                    ServiceWorkerSays('fetch response from network. ' + event.request.url);
+                    //ServiceWorkerSays('fetch response from network. ' + event.request.url);
                     caches.open(CACHE_VERSION + 'fetch-Solitaire').then(function add(cache) {
                         cache.put(event.request, cacheCopy);
                     }).then(function () {
-                        ServiceWorkerSays('fetch response stored in cache. ' + event.request.url);
+                        //ServiceWorkerSays('fetch response stored in cache. ' + event.request.url);
                     });
                     return response;
                 }
