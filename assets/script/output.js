@@ -12,21 +12,19 @@ function arrayOutput(element, name) {
     outputContainer.innerHTML = img;
 }
 
-function showPopUp(message, defaultMode = true) {
+function showPopUp(event, message = "Do you want to restart your game?") {
     let body = document.getElementsByTagName("body")[0].innerHTML;
     let popUpOuterHTML =
         '<div id="popUp">' +
         '<div id="popUpContent">' +
         '<span class="close">&times;</span>' +
         '<p>' + message + '</p>' +
-        '<button id="restart">Restart</button>'+
-        !defaultMode ? '<button id="continue">Continue</button>' : '' +
+        '<button class="restart">Restart</button>'+
         '</div>' +
         '</div>';
     document.getElementsByTagName("body")[0].innerHTML = popUpOuterHTML + body;
     document.getElementsByClassName("close")[0].addEventListener("click", closePopUp);
-    document.getElementById("restart").addEventListener("click", newGame);
-    document.getElementById("continue").addEventListener("click", continueLastGame)
+    document.getElementsByClassName("restart")[0].addEventListener("click", restart);
 }
 
 function closePopUp(event) {
@@ -34,7 +32,7 @@ function closePopUp(event) {
     eventHandler();
 }
 
-function newGame() {
+function restart() {
     cardGame = new CardGame();
     cardGame.init();
     updateOutput();
@@ -96,14 +94,10 @@ function updateOutput() {
     });
     document.getElementById('goal').innerHTML = elementInnerHTML;
 
-    let allGoalCardNumbers = [];
-    cardGame.goal.forEach(card => allGoalCardNumbers.push(card.cardnumber));
-    allGoalCardNumbers.map(number => number === "k");
-    if(allGoalCardNumbers[0] && allGoalCardNumbers[1] &&
-        allGoalCardNumbers[2] && allGoalCardNumbers[3])
-        showPopUp("Congratulations. You won");
-
-    storeCardGame(cardGame);
+    let isKing = [];
+    cardGame.goal.forEach(card => isKing.push(card.cardnumber === "k"));
+    if(isKing[0]&& isKing[1] && isKing[2] && isKing[3])
+        showPopUp(null, "Congratulations. You won. Do you want to play another round?");
     eventHandler();
 }
 
@@ -117,6 +111,7 @@ function eventHandler() {
             cardsInRow[j].addEventListener("click", arrayClicked)
         }
     }
+    document.getElementById("restartButton").addEventListener("click", showPopUp)
 }
 
 updateOutput();

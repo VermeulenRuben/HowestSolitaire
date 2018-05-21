@@ -20,9 +20,9 @@ img{
     height: 175px;
 }
 
-img[title="sound"]{
-    width: 75px;
-    height: auto;
+#sound, #restartButton{
+    width: 100px;
+    height: 100px;
 }
 
 #deck, #given, #goal, #goal div{
@@ -55,7 +55,7 @@ header, footer{
     display: block;
 }
 
-#goal {
+#goal, #restartButton{
     margin-left: auto;
 }
 

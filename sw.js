@@ -4,8 +4,6 @@ const OFFLINE_FUNDAMENTALS =
         'index.html',
         'assets/style/screen.css',
         'assets/script/sound.js',
-        'assets/script/localforage/localforage.js',
-        'assets/script/storage.js',
         'assets/script/card.js',
         'assets/script/output.js',
         'assets/script/swReg.js',
@@ -14,6 +12,7 @@ const OFFLINE_FUNDAMENTALS =
         'audio/bgm.mp3',
 
         'images/bg.png',
+        'images/reset.png',
         'images/soundState/sound-off.png',
         'images/soundState/sound-on.png',
         'images/cards/back.png',
