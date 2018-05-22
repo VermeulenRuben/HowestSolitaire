@@ -3,7 +3,7 @@
   "short_name": "Howest Solitaire",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#fff",
+  "background_color": "#556B2F",
   "description": "Solitaire with a Howest Theme",
   "icons": [{
     "src": "images/wam/favicon48.png",
