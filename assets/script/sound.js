@@ -1,4 +1,5 @@
-const soundHTMLCollection = document.getElementById("sound").getElementsByTagName("img");
+const soundButton = document.getElementById("sound");
+const restartButton = document.getElementById("restartButton");
 let soundState = "";
 let bgm = new Audio('audio/bgm.mp3');
 
@@ -8,12 +9,8 @@ function playClick() {
 
 function changeSoundStateTo(newState) {
     soundState = "sound-" + newState;
-    for(let i = 0; i < soundHTMLCollection.length; i++) {
-        if(soundHTMLCollection[i].getAttribute("title") === "sound") {
-            soundHTMLCollection[i].setAttribute("alt", soundState);
-            soundHTMLCollection[i].setAttribute("src", "images/soundState/" + soundState + ".png");
-        }
-    }
+    soundButton.setAttribute("alt", soundState);
+    soundButton.setAttribute("src", "images/soundState/" + soundState + ".png");
     checkSoundState()
 }
 
@@ -28,16 +25,12 @@ function checkSoundState() {
 }
 
 function initSound() {
-    const linkElements = document.getElementsByTagName("a");
-
-    for(let i = 0; i < soundHTMLCollection.length; i++) {
-        if(soundHTMLCollection[i].getAttribute("title") === "sound") soundState = soundHTMLCollection[i].getAttribute("alt");
-    }
-
-    for (let i = 0;  i < linkElements.length; i++){
-        linkElements[i].addEventListener("click", playClick);
-        if(linkElements[i].getAttribute("id") === "sound") linkElements[i].addEventListener("click", toggleSoundState)
-    }
+    if(soundButton.getAttribute("title") === "sound") soundState = soundButton.getAttribute("alt");
+    restartButton.addEventListener("click", playClick);
+    soundButton.addEventListener("click", function () {
+        playClick();
+        toggleSoundState();
+    });
 
     bgm.volume = 0.3;
     bgm.addEventListener('ended', function() {
