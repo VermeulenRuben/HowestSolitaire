@@ -154,6 +154,7 @@ function updateOutput() {
     cardGame.goal.forEach(card => isKing.push(card.cardnumber === "k"));
     if(isKing[0]&& isKing[1] && isKing[2] && isKing[3])
         showPopUp(null, "Congratulations. You won. Do you want to play another round?");
+        clearTimeout(timer);
     eventHandler();
 }
 
