@@ -41,6 +41,20 @@ header, footer{
     justify-content: flex-start;
 }
 
+footer{
+    align-items: center;
+}
+
+#timer{
+    padding: 10px;
+    margin-left: 40px;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 3rem;
+    background-color: olivedrab;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
 #table{
     min-height: 75vh;
     align-items: flex-start;

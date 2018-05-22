@@ -3,7 +3,6 @@ const OFFLINE_FUNDAMENTALS =
     [
         'index.html',
         'assets/style/screen.css',
-        'assets/script/sound.js',
         'assets/script/card.js',
         'assets/script/output.js',
         'assets/script/swReg.js',

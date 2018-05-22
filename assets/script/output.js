@@ -1,7 +1,60 @@
+let soundButton;
+let restartButton;
 let cardGame = new CardGame();
+let timeInSec = 0;
+let timer = setInterval(addSec, 1000);
+let soundState = "";
+let bgm = new Audio('audio/bgm.mp3');
 cardGame.init();
 
+function playClick() {
+    if(soundState === "sound-on") new Audio('audio/fx/click.mp3').play();
+}
 
+function changeSoundStateTo(newState) {
+    soundState = "sound-" + newState;
+    soundButton.setAttribute("alt", soundState);
+    soundButton.setAttribute("src", "images/soundState/" + soundState + ".png");
+    checkSoundState()
+}
+
+function toggleSoundState() {
+    if(soundState === "sound-on") changeSoundStateTo("off");
+    else if(soundState === "sound-off") changeSoundStateTo("on");
+}
+
+function checkSoundState() {
+    if(soundState === "sound-on") bgm.play();
+    else if(soundState === "sound-off") bgm.pause();
+}
+
+function setSoundEvents() {
+    soundButton = document.getElementById("sound");
+    restartButton = document.getElementById("restartButton");
+    soundState = soundButton.getAttribute("alt");
+    restartButton.addEventListener("click", playClick);
+    soundButton.addEventListener("click", function () {
+        playClick();
+        toggleSoundState();
+    });
+}
+
+function initSound() {
+    setSoundEvents();
+    bgm.volume = 0.3;
+    bgm.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+    changeSoundStateTo("off")
+}
+
+function addSec() {
+    timeInSec++;
+    let sec = timeInSec % 60;
+    let min = (timeInSec - sec) / 60;
+    document.getElementById("timer").innerHTML = (min<10? "0"+min : min) + ":" + (sec<10? "0"+sec : sec);
+}
 
 function arrayOutput(element, name) {
     let outputContainer = document.getElementById(name);
@@ -13,7 +66,6 @@ function arrayOutput(element, name) {
 }
 
 function showPopUp(event, message = "Do you want to restart your game?") {
-    let body = document.getElementsByTagName("body")[0].innerHTML;
     let popUpOuterHTML =
         '<div id="popUp">' +
         '<div id="popUpContent">' +
@@ -22,20 +74,24 @@ function showPopUp(event, message = "Do you want to restart your game?") {
         '<button class="restart">Restart</button>'+
         '</div>' +
         '</div>';
-    document.getElementsByTagName("body")[0].innerHTML = popUpOuterHTML + body;
+    document.getElementsByTagName("body")[0].innerHTML += popUpOuterHTML;
     document.getElementsByClassName("close")[0].addEventListener("click", closePopUp);
     document.getElementsByClassName("restart")[0].addEventListener("click", restart);
 }
 
 function closePopUp(event) {
-    document.getElementsByTagName("body")[0].removeChild(document.querySelector('#popUp'))
+    document.getElementsByTagName("body")[0].removeChild(document.querySelector('#popUp'));
     eventHandler();
 }
 
 function restart() {
     cardGame = new CardGame();
+    timeInSec = 0;
+    clearTimeout(timer);
+    timer = setInterval(addSec, 1000);
     cardGame.init();
     updateOutput();
+    setSoundEvents();
     closePopUp();
 }
 
@@ -115,3 +171,4 @@ function eventHandler() {
 }
 
 updateOutput();
+initSound();
