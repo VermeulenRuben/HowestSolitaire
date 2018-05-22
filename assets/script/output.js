@@ -70,13 +70,12 @@ function showPopUp(event, message = "Do you want to restart your game?") {
         '<div id="popUp">' +
         '<div id="popUpContent">' +
         '<span class="close">&times;</span>' +
-        '<p>' + message + '</p>' +
-        '<button class="restart">Restart</button>'+
-        '</div>' +
-        '</div>';
+        '<p>' + message + '</p>';
+    if(event.target.id !== "personalBest") popUpOuterHTML += '<button class="restart">Restart</button>';
+    popUpOuterHTML += '</div></div>';
     document.getElementsByTagName("body")[0].innerHTML += popUpOuterHTML;
     document.getElementsByClassName("close")[0].addEventListener("click", closePopUp);
-    document.getElementsByClassName("restart")[0].addEventListener("click", restart);
+    if(event.target.id !== "personalBest") document.getElementsByClassName("restart")[0].addEventListener("click", restart);
 }
 
 function closePopUp(event) {
@@ -155,6 +154,7 @@ function updateOutput() {
     if(isKing[0]&& isKing[1] && isKing[2] && isKing[3]) {
         showPopUp(null, "Congratulations. You won. Do you want to play another round?");
         clearTimeout(timer);
+        setPersonalBest(timeInSec);
     }
     eventHandler();
 }
@@ -169,7 +169,8 @@ function eventHandler() {
             cardsInRow[j].addEventListener("click", arrayClicked)
         }
     }
-    document.getElementById("restartButton").addEventListener("click", showPopUp)
+    document.getElementById("restartButton").addEventListener("click", showPopUp);
+    document.getElementById("personalBest").addEventListener("click", getPersonalBest)
 }
 
 updateOutput();

@@ -4,6 +4,8 @@ const OFFLINE_FUNDAMENTALS =
         'index.html',
         'manifest.json',
         'assets/style/screen.css',
+        'assets/script/localForage/localForage.js',
+        'assets/script/storage.js',
         'assets/script/card.js',
         'assets/script/output.js',
         'assets/script/swReg.js',

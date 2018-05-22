@@ -25,6 +25,10 @@ img{
     height: 100px;
 }
 
+#restartButton, #timer{
+    margin-left: 40px;
+}
+
 #deck, #given, #goal, #goal div{
     display: inline-block;
 }
@@ -46,12 +50,20 @@ footer{
 }
 
 #timer{
-    padding: 10px;
-    margin-left: 40px;
-    font-family: "Comic Sans MS", sans-serif;
-    font-size: 3rem;
     background-color: olivedrab;
     border: 3px solid black;
+}
+
+#personalBest{
+    background-color: black;
+    border: 3px solid black;
+    color: white;
+}
+
+#timer, #personalBest{
+    padding: 10px;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 3rem;
     border-radius: 20px;
 }
 
@@ -69,7 +81,7 @@ footer{
     display: block;
 }
 
-#goal, #restartButton{
+#goal, #personalBest{
     margin-left: auto;
 }
 
@@ -98,6 +110,7 @@ footer{
 
 #popUpContent p{
     text-align: center;
+    padding: 40px;
 }
 
 #popUpContent button{
