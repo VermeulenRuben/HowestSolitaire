@@ -2,6 +2,7 @@ const CACHE_VERSION = 'v1::';
 const OFFLINE_FUNDAMENTALS =
     [
         'index.html',
+        'manifest.json',
         'assets/style/screen.css',
         'assets/script/card.js',
         'assets/script/output.js',
@@ -14,6 +15,14 @@ const OFFLINE_FUNDAMENTALS =
         'images/reset.png',
         'images/soundState/sound-off.png',
         'images/soundState/sound-on.png',
+
+        'images/wam/favicon192.png',
+        "images/wam/favicon168.png",
+        "images/wam/favicon144.png",
+        "images/wam/favicon96.png",
+        "images/wam/favicon72.png",
+        "images/wam/favicon48.png",
+
         'images/cards/back.png',
         'images/cards/error.png',
 
