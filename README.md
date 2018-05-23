@@ -4,7 +4,7 @@
 
 1.  Repository
 2.  App's Function
-3.  Used Technology
+3.  Used Technologies
 4.  Hosted by Github Pages
 
 ## 1\. Repository
@@ -36,3 +36,11 @@ My application can be divided into 4 sections according to the html:
     The given array is an array of 24\. At the start of a game this array will be empty (indicated by the question mark card). When clicking on the deck you will be able to flip cards. These cards will then be pushed to the given array. The cards that were on the deck are then fully visible in the given. When clicking on the given the app will decide if there is a valid position for the card displayed. If there isn't nothing will happen, if there is the card will be placed at the FIRST valid position found and the card will be removed from the given array.
 
 4.  The table
+
+    The table of the card game is an array of 7 arrays of 13\. At the start of the game each array gets filled in with cards. The first row gets filled with 1 card which increases the farther we go to the right, peaking at the seventh row with seven cards. The last card of the row is flipped on his back and is fully visible. when a card gets taken from the table. The card behind him gets flipped, if it wasn't already flipped. When a row is empty, only a king can be added to that row.
+
+## 3\. Used Technologies
+
+### Manifest and Service Worker
+
+### LocalForage
