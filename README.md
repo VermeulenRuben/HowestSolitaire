@@ -41,6 +41,20 @@ My application can be divided into 4 sections according to the html:
 
 ## 3\. Used Technologies
 
+### Object Oriented Javascript and Pseudo Model-View Principles
+
+I chose for javascript because I didn't really have a need for a back-end server. It was far easier to host static files on Github Pages then it would be to make a NodeJS backend which would have the same functionality. I did choose not to implement jquery as a personal test to learn pure javascript. I chose to implement a pseudo model-view structure. With the model being "card.js" and the view being "output.js".
+
+Even though static files were easier to host, documentation of some technologies list was very hard to find because most documentation was for a NodeJS server and used "npm install" to implement these technologies.
+
 ### Manifest and Service Worker
 
+By using a manifest config, my web app can now be installed as an native application onto anyone's phone. With the service worker, my app can now cache multiple files offline. This means my app is able to function offline.
+
 ### LocalForage
+
+The app uses localForage to store the best personal time after winning a game. It also shows your current best personal time in a popUpScreen when pushing the button "Personal Best".
+
+## 4\. Used Technologies
+
+Press the following link on your mobile phone: [Howest Solitaire - GitHub Pages](vermeulenruben.github.io/HowestSolitaire/)
