@@ -57,4 +57,4 @@ The app uses localForage to store the best personal time after winning a game. I
 
 ## 4\. Used Technologies
 
-Press the following link on your mobile phone: [Howest Solitaire - GitHub Pages](vermeulenruben.github.io/HowestSolitaire/)
+Press the following link on your mobile phone: [Howest Solitaire - GitHub Pages](http://vermeulenruben.github.io/HowestSolitaire/)
