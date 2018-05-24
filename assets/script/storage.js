@@ -28,3 +28,9 @@ function getPersonalBest(event) {
         showPopUp(event, message);
     });
 }
+
+// function clearStorage() {
+//     localforage.removeItem(SCORE_KEY, function (err) {
+//         console.log("LocalForage: Your personal best was deleted");
+//     })
+// }

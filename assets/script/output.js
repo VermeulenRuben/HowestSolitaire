@@ -66,16 +66,17 @@ function arrayOutput(element, name) {
 }
 
 function showPopUp(event, message = "Do you want to restart your game?") {
+    let isPersonalBestEvent = event !== null && event.target.id !== "personalBest";
     let popUpOuterHTML =
         '<div id="popUp">' +
         '<div id="popUpContent">' +
         '<span class="close">&times;</span>' +
         '<p>' + message + '</p>';
-    if(event.target.id !== "personalBest") popUpOuterHTML += '<button class="restart">Restart</button>';
+    if(isPersonalBestEvent) popUpOuterHTML += '<button class="restart">Restart</button>';
     popUpOuterHTML += '</div></div>';
     document.getElementsByTagName("body")[0].innerHTML += popUpOuterHTML;
     document.getElementsByClassName("close")[0].addEventListener("click", closePopUp);
-    if(event.target.id !== "personalBest") document.getElementsByClassName("restart")[0].addEventListener("click", restart);
+    if(isPersonalBestEvent) document.getElementsByClassName("restart")[0].addEventListener("click", restart);
 }
 
 function closePopUp(event) {
