@@ -174,5 +174,16 @@ function eventHandler() {
     document.getElementById("personalBest").addEventListener("click", getPersonalBest)
 }
 
+function disableLandscapeView() {
+    window.addEventListener('orientationchange', function ()
+    {
+        if (window.innerHeight > window.innerWidth)
+        {
+            document.getElementsByTagName('body')[0].style.transform = "rotate(90deg)";
+        }
+    });
+}
+
+disableLandscapeView();
 updateOutput();
 initSound();
