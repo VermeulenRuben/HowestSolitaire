@@ -4,7 +4,7 @@
 
 html{
     touch-action: pan-y;
-    background: #556B2F url("../../images/bg/page.png") no-repeat fixed center center;
+    background: #556B2F url("../../images/bg/page.png") repeat-y fixed center center;
 }
 
 html, button{
