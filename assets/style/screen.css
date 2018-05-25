@@ -157,37 +157,36 @@ footer{
 /*--------- Desktop CSS ---------*/
 /*-------------------------------*/
 
+@media screen and (min-width: 1025px) {
+    html,button{
+        font-size: 1.7vh;
+    }
 
-/*@media only screen and (min-width: 1025px) {*/
-    /*html,button{*/
-        /*font-size: 1.7vh;*/
-    /*}*/
+    body{
+        width: 26%;
+        margin: 2.5vh auto auto;
+    }
 
-    /*body{*/
-        /*width: 26%;*/
-        /*margin: 2.5vh auto auto;*/
-    /*}*/
+    #table img, header img{
+        width: 3.5vw;
+        height: 10vh;
+    }
 
-    /*#table img, header img{*/
-        /*width: 3.5vw;*/
-        /*height: 10vh;*/
-    /*}*/
+    #table img{
+        margin-bottom: -6vh;
+    }
 
-    /*#table img{*/
-        /*margin-bottom: -6vh;*/
-    /*}*/
+    #timer{
+        width: 3vw;
+    }
 
-    /*#timer{*/
-        /*width: 3vw;*/
-    /*}*/
+    #personalBest{
+        width: 6vw;
+    }
 
-    /*#personalBest{*/
-        /*width: 6vw;*/
-    /*}*/
-
-    /*#popUpContent{*/
-        /*width: 26%;*/
-        /*margin-top: 35vh*/
-    /*}*/
-/*}*/
+    #popUpContent{
+        width: 26%;
+        margin-top: 35vh
+    }
+}
 
