@@ -13,7 +13,8 @@ const OFFLINE_FUNDAMENTALS =
         'audio/fx/click.mp3',
         'audio/bgm.mp3',
 
-        'images/bg.png',
+        'images/bg/page.png',
+        'images/bg/table.png',
         'images/reset.png',
         'images/soundState/sound-off.png',
         'images/soundState/sound-on.png',
