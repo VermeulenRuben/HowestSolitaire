@@ -26,63 +26,7 @@ const OFFLINE_FUNDAMENTALS =
         "images/wam/favicon48.png",
 
         'images/cards/back.png',
-        'images/cards/error.png',
-
-        'images/cards/bee/a.png',
-        'images/cards/bee/2.png',
-        'images/cards/bee/3.png',
-        'images/cards/bee/4.png',
-        'images/cards/bee/5.png',
-        'images/cards/bee/6.png',
-        'images/cards/bee/7.png',
-        'images/cards/bee/8.png',
-        'images/cards/bee/9.png',
-        'images/cards/bee/10.png',
-        'images/cards/bee/j.png',
-        'images/cards/bee/q.png',
-        'images/cards/bee/k.png',
-
-        'images/cards/database/a.png',
-        'images/cards/database/2.png',
-        'images/cards/database/3.png',
-        'images/cards/database/4.png',
-        'images/cards/database/5.png',
-        'images/cards/database/6.png',
-        'images/cards/database/7.png',
-        'images/cards/database/8.png',
-        'images/cards/database/9.png',
-        'images/cards/database/10.png',
-        'images/cards/database/j.png',
-        'images/cards/database/q.png',
-        'images/cards/database/k.png',
-
-        'images/cards/java/a.png',
-        'images/cards/java/2.png',
-        'images/cards/java/3.png',
-        'images/cards/java/4.png',
-        'images/cards/java/5.png',
-        'images/cards/java/6.png',
-        'images/cards/java/7.png',
-        'images/cards/java/8.png',
-        'images/cards/java/9.png',
-        'images/cards/java/10.png',
-        'images/cards/java/j.png',
-        'images/cards/java/q.png',
-        'images/cards/java/k.png',
-
-        'images/cards/social/a.png',
-        'images/cards/social/2.png',
-        'images/cards/social/3.png',
-        'images/cards/social/4.png',
-        'images/cards/social/5.png',
-        'images/cards/social/6.png',
-        'images/cards/social/7.png',
-        'images/cards/social/8.png',
-        'images/cards/social/9.png',
-        'images/cards/social/10.png',
-        'images/cards/social/j.png',
-        'images/cards/social/q.png',
-        'images/cards/social/k.png'
+        'images/cards/error.png'
     ];
 
 let ServiceWorkerSays = function (message) {
@@ -99,6 +43,39 @@ self.addEventListener('install', function (event) {
         ServiceWorkerSays("install failed: " + err)
     }))
 });
+
+function fetchFromCacheOrNetwork(request) {
+    caches.match(request).then(function (cached) {
+        let networked = fetch(request)
+            .then(fetchedFromNetwork, unableToResolve)
+            .catch(unableToResolve);
+        let offOrOnline = cached ? '(cached)' : '(network)';
+        //ServiceWorkerSays("fetch event " + offOrOnline + " " + event.request.url);
+        return cached || networked;
+
+        function fetchedFromNetwork(response) {
+            let cacheCopy = response.clone();
+            //ServiceWorkerSays('fetch response from network. ' + event.request.url);
+            caches.open(CACHE_VERSION + 'fetch-Solitaire').then(function add(cache) {
+                cache.put(request, cacheCopy);
+            }).then(function () {
+                //ServiceWorkerSays('fetch response stored in cache. ' + event.request.url);
+            });
+            return response;
+        }
+
+        function unableToResolve() {
+            ServiceWorkerSays('fetch request failed in both cache and network.');
+            return new Response('<h1>Service Unavailable</h1>', {
+                status: 503,
+                statusText: 'Service Unavailable',
+                headers: new Headers({
+                    'Content-Type': 'text/html'
+                })
+            });
+        }
+    })
+}
 
 self.addEventListener('fetch', function (event) {
     ServiceWorkerSays("fetch event in progress...");
@@ -157,3 +134,16 @@ self.addEventListener('activate', function (event) {
         })
     );
 });
+
+function CacheAllCards() {
+    let numbers = ["a",2,3,4,5,6,7,8,9,10,"j","q","k"];
+    let categories = ["bee", "database", "social", "java"];
+    categories.forEach(category => {
+        numbers.forEach(nbr => {
+            fetchFromCacheOrNetwork(new Request ("images/cards/" + category + "/" + nbr + ".png"))
+        })
+    })
+}
+
+CacheAllCards();
+
