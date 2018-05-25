@@ -174,6 +174,5 @@ function eventHandler() {
     document.getElementById("personalBest").addEventListener("click", getPersonalBest)
 }
 
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 updateOutput();
 initSound();
