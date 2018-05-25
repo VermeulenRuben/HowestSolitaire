@@ -36,7 +36,7 @@ header, footer, #table, #popUpContent button{
 
 header, footer, #table{
     display: flex;
-    background: url("../../images/bg/table.png") no-repeat center center fixed;
+    background: url("../../images/bg/table.png") no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
