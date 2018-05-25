@@ -4,13 +4,11 @@
 
 html{
     height: 100%;
-    width: 100%;
     touch-action: pan-y;
     background: #556B2F url("../../images/bg/page.png") no-repeat fixed center center;
 }
 
 body{
-    width: 100%;
     height: 100%;
 }
 
