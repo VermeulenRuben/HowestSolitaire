@@ -5,10 +5,11 @@ html{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-size: 2vh;
 }
 
 #table img{
-    margin-bottom: -100px;
+    margin-bottom: -5vh;
 }
 
 #table img:last-child{
@@ -16,17 +17,17 @@ html{
 }
 
 img{
-    width: 130px;
-    height: 175px;
+    width: 13vw;
+    height: 10vh;
 }
 
 #sound, #restartButton{
-    width: 100px;
-    height: 100px;
+    width: 6vh;
+    height: 6vh;
 }
 
 #restartButton, #timer{
-    margin-left: 40px;
+    margin-left: 2vw;
 }
 
 #deck, #given, #goal, #goal div{
@@ -63,12 +64,12 @@ footer{
 #timer, #personalBest{
     padding: 10px;
     font-family: "Comic Sans MS", sans-serif;
-    font-size: 3rem;
+    font-weight: bold;
     border-radius: 20px;
 }
 
 #table{
-    min-height: 75vh;
+    min-height: 70vh;
     align-items: flex-start;
     justify-content: center;
 }
@@ -100,9 +101,8 @@ footer{
 
 #popUpContent{
     font-family: "Comic Sans MS", sans-serif;
-    font-size: 3rem;
     background-color: olivedrab;
-    margin: 30vh auto auto;
+    margin: 25vh auto auto;
     border: 3px solid black;
     border-radius: 20px;
     width: 80%;
@@ -110,11 +110,12 @@ footer{
 
 #popUpContent p{
     text-align: center;
-    padding: 40px;
+    padding: 2vh;
 }
 
 #popUpContent button{
-    font-size: 3rem;
+    font-size: 0.8rem;
+    font-weight: bold;
     margin: 20px;
     background-color: darkolivegreen;
     border: 1px solid black;
