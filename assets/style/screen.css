@@ -4,11 +4,11 @@
 
 html{
     touch-action: pan-y;
-    background: url("../../images/bg/page.png") no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: url("../../images/bg/page.png") no-repeat center center fixed;
+}
+
+body{
+    margin-top: 0;
 }
 
 html, button{
@@ -37,6 +37,9 @@ header, footer, #table, #popUpContent button{
 header, footer, #table{
     display: flex;
     background: url("../../images/bg/table.png") no-repeat center center fixed;
+}
+
+html, header, footer, #table{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
