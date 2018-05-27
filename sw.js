@@ -79,7 +79,6 @@ function fetchFromCacheOrNetwork(request) {
 }
 
 self.addEventListener('fetch', function (event) {
-    ServiceWorkerSays("fetch event in progress...");
     if (event.request.method !== 'GET') {
         ServiceWorkerSays(
             "fetch event was ignored. Only the method " +

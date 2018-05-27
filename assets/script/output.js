@@ -18,7 +18,7 @@ cardGame.init();
 
 function playClick() {
     if(soundState === "sound-on") new Audio('audio/fx/click.mp3').play();
-}
+};
 
 function changeSoundStateTo(newState) {
     soundState = "sound-" + newState;
@@ -75,17 +75,17 @@ function addSec() {
 
 
 function showPopUp(event, message = "Do you want to restart your game?") {
-    let isPersonalBestEvent = event !== null && event.target.id !== "personalBest";
+    let isNotPersonalBestEvent = (event !== null && event.target.id !== "personalBest") || event === null;
     let popUpOuterHTML =
         '<div id="popUp">' +
         '<div id="popUpContent">' +
         '<span class="close">&times;</span>' +
         '<p>' + message + '</p>';
-    if(isPersonalBestEvent) popUpOuterHTML += '<button class="restart">Restart</button>';
+    if(isNotPersonalBestEvent) popUpOuterHTML += '<button class="restart">Restart</button>';
     popUpOuterHTML += '</div></div>';
     document.getElementsByTagName("body")[0].innerHTML += popUpOuterHTML;
     document.getElementsByClassName("close")[0].addEventListener("click", closePopUp);
-    if(isPersonalBestEvent) document.getElementsByClassName("restart")[0].addEventListener("click", restart);
+    if(isNotPersonalBestEvent) document.getElementsByClassName("restart")[0].addEventListener("click", restart);
 }
 
 function closePopUp(event) {
