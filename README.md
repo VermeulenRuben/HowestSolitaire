@@ -17,8 +17,6 @@ This app is a recreation of a game called Solitaire aka Patience. This game does
 
 For an explanation on how the game of Solitaire is played. I will refer to this Wikipedia article: [Wikipedia - Solitaire/Patience(game)](https://en.wikipedia.org/wiki/Patience_(game))
 
-![Gameplay Image is missing](images/rm/start.png)
-
 My application can be divided into 4 sections according to the html:
 
 1.  The goal
