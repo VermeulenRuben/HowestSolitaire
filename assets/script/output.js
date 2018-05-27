@@ -1,3 +1,8 @@
+
+/* ------------------------------------------- */
+/* ------------- Global Variables ------------ */
+/* ------------------------------------------- */
+
 let soundButton;
 let restartButton;
 let cardGame = new CardGame();
@@ -6,6 +11,10 @@ let timer = setInterval(addSec, 1000);
 let soundState = "";
 let bgm = new Audio('audio/bgm.mp3');
 cardGame.init();
+
+/* ------------------------------------------- */
+/* --------- Sound Control Functions --------- */
+/* ------------------------------------------- */
 
 function playClick() {
     if(soundState === "sound-on") new Audio('audio/fx/click.mp3').play();
@@ -49,6 +58,10 @@ function initSound() {
     changeSoundStateTo("off")
 }
 
+/* ------------------------------------------- */
+/* --------- Timer Control Functions --------- */
+/* ------------------------------------------- */
+
 function addSec() {
     timeInSec++;
     let sec = timeInSec % 60;
@@ -56,14 +69,10 @@ function addSec() {
     document.getElementById("timer").innerHTML = (min<10? "0"+min : min) + ":" + (sec<10? "0"+sec : sec);
 }
 
-function arrayOutput(element, name) {
-    let outputContainer = document.getElementById(name);
-    let img = "<img class='card' src='../HowestSolitaire/images/cards/error.png' alt='Card'/>";
-    if(element !== undefined){
-        img = "<img class='card' src='" + element.imgSrc + "' alt='Card'/>"
-    }
-    outputContainer.innerHTML = img;
-}
+/* ------------------------------------------- */
+/* --------- popUp Control Functions --------- */
+/* ------------------------------------------- */
+
 
 function showPopUp(event, message = "Do you want to restart your game?") {
     let isPersonalBestEvent = event !== null && event.target.id !== "personalBest";
@@ -84,7 +93,11 @@ function closePopUp(event) {
     eventHandler();
 }
 
-function restart() {
+/* ------------------------------------------- */
+/* ------------- Event Functions ------------- */
+/* ------------------------------------------- */
+
+function restart(event) {
     cardGame = new CardGame();
     timeInSec = 0;
     clearTimeout(timer);
@@ -95,14 +108,14 @@ function restart() {
     closePopUp();
 }
 
-function arrayClicked(e) {
-    switch (e.currentTarget.id){
+function arrayClicked(event) {
+    switch (event.currentTarget.id){
         case "given":
             cardGame.takeFromGiven();
             updateOutput();
             break;
         case "deck":
-            cardGame.deckHandler();
+            cardGame.takenFromDeck();
             updateOutput();
             break;
         default:
@@ -121,6 +134,33 @@ function arrayClicked(e) {
         updateOutput();
     }
 
+}
+
+function eventHandler() {
+    document.getElementById("deck").addEventListener("click", arrayClicked);
+    document.getElementById("given").addEventListener("click",arrayClicked);
+    let rows = document.getElementById("table").children;
+    for (let i = 0; i < rows.length; i++){
+        let cardsInRow = rows[i].children;
+        for(let j = 0; j < cardsInRow.length; j++){
+            cardsInRow[j].addEventListener("click", arrayClicked)
+        }
+    }
+    document.getElementById("restartButton").addEventListener("click", showPopUp);
+    document.getElementById("personalBest").addEventListener("click", getPersonalBest)
+}
+
+/* ------------------------------------------- */
+/* -------- Output Control Functions --------- */
+/* ------------------------------------------- */
+
+function arrayOutput(element, name) {
+    let outputContainer = document.getElementById(name);
+    let img = "<img class='card' src='../HowestSolitaire/images/cards/error.png' alt='Card'/>";
+    if(element !== undefined){
+        img = "<img class='card' src='" + element.imgSrc + "' alt='Card'/>"
+    }
+    outputContainer.innerHTML = img;
 }
 
 function updateOutput() {
@@ -160,19 +200,9 @@ function updateOutput() {
     eventHandler();
 }
 
-function eventHandler() {
-    document.getElementById("deck").addEventListener("click", arrayClicked);
-    document.getElementById("given").addEventListener("click",arrayClicked);
-    let rows = document.getElementById("table").children;
-    for (let i = 0; i < rows.length; i++){
-        let cardsInRow = rows[i].children;
-        for(let j = 0; j < cardsInRow.length; j++){
-            cardsInRow[j].addEventListener("click", arrayClicked)
-        }
-    }
-    document.getElementById("restartButton").addEventListener("click", showPopUp);
-    document.getElementById("personalBest").addEventListener("click", getPersonalBest)
-}
+/* ------------------------------------------- */
+/* ------------------- Main ------------------ */
+/* ------------------------------------------- */
 
 updateOutput();
 initSound();

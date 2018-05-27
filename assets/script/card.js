@@ -1,3 +1,8 @@
+
+/* ------------------------------------------- */
+/* ------------- Helper Functions ------------ */
+/* ------------------------------------------- */
+
 function isEmpty(element) {
     return element === undefined || element === null
 }
@@ -21,6 +26,12 @@ function getIndexOfLastFilledItemFromArray(array) {
     return "empty"
 }
 
+
+/* ------------------------------------------- */
+/* --------------- Card Object --------------- */
+/* ------------------------------------------- */
+
+
 function Card(category, cardNumber) {
     this.category = category;
     this.cardnumber = cardNumber;
@@ -34,14 +45,15 @@ Card.prototype.setCardIMGPath = function () {
     if (!this.showBack) return "images/cards/" + this.category + "/" + this.cardnumber + ".png";
     else return "images/cards/back.png"
 };
+
 Card.prototype.flip = function () {
     this.showBack = !this.showBack;
     this.imgSrc = this.setCardIMGPath();
 };
-Card.prototype.toString = function () {
-    let isTurned = (this.showBack) ? "Yes" : "No";
-    return "Cardset: " + this.category + " Number: " + this.cardnumber + " Turned: " + isTurned;
-};
+
+/* ------------------------------------------- */
+/* ------------- CardGame Object ------------- */
+/* ------------------------------------------- */
 
 function CardGame() {
     this.goal = new Array(4);
@@ -51,13 +63,27 @@ function CardGame() {
     this.takenFromTableCounter = 1;
 }
 
+/* --------- CardGame Helper Methods --------- */
+
 CardGame.prototype.refreshDeck = function () {
     this.given.forEach(card => {if(!isEmpty(card))card.flip()});
     this.deck = this.given;
     this.given = new Array(24);
 };
 
-CardGame.prototype.takeFromDeck = function (taken) {
+CardGame.prototype.findNeighbours = function (card) {
+    let cardNumbers = ["k", "q", "j", 10, 9, 8, 7, 6, 5, 4, 3, 2, "a"];
+    for (let i = 0; i < cardNumbers.length; i++) {
+        if (cardNumbers[i] === card.cardnumber) return {predecessor: cardNumbers[i - 1], successor: cardNumbers[i + 1]};
+    }
+};
+
+/* ----------- TakenFrom Handlers ------------ */
+
+CardGame.prototype.takenFromDeck = function () {
+    let lastItem = this.given[this.given.length - this.takenFromTableCounter];
+    let taken = this.deck[0];
+    if (!(isEmpty(lastItem))) this.refreshDeck();
     if (!(isEmpty(taken))) {
         taken.flip();
         for (let i = 0; i < this.deck.length - 1; i++) {
@@ -68,19 +94,6 @@ CardGame.prototype.takeFromDeck = function (taken) {
         if (next === "empty") next = 0;
         else next++;
         this.given[next] = taken;
-    }
-};
-
-CardGame.prototype.deckHandler = function () {
-    let lastItem = this.given[this.given.length - this.takenFromTableCounter];
-    if (!(isEmpty(lastItem))) this.refreshDeck();
-    this.takeFromDeck(this.deck[0]);
-};
-
-CardGame.prototype.findNeighbours = function (card) {
-    let cardNumbers = ["k", "q", "j", 10, 9, 8, 7, 6, 5, 4, 3, 2, "a"];
-    for (let i = 0; i < cardNumbers.length; i++) {
-        if (cardNumbers[i] === card.cardnumber) return {predecessor: cardNumbers[i - 1], successor: cardNumbers[i + 1]};
     }
 };
 
@@ -115,6 +128,8 @@ CardGame.prototype.takeFromGiven = function () {
     if (!(isEmpty(taken))) hasPosition = this.findAPosition(taken, true);
     if (hasPosition) this.given[getIndexOfLastFilledItemFromArray(this.given)] = undefined;
 };
+
+/* ------------- Position Finder ------------- */
 
 CardGame.prototype.findAPosition = function (taken, isFromGiven = false) {
     if(taken !== undefined && typeof taken[0] !== "object") {
@@ -175,6 +190,8 @@ CardGame.prototype.findAPosition = function (taken, isFromGiven = false) {
     }
 };
 
+/* ---------- Initiate Game Method ----------- */
+
 CardGame.prototype.init = function () {
     let setOfCards = new Array(52);
     let categories = ["bee", "database", "social", "java"];
@@ -225,4 +242,3 @@ CardGame.prototype.init = function () {
         [this.deck[i], this.deck[j]] = [this.deck[j], this.deck[i]];
     }
 };
-

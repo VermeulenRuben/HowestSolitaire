@@ -83,8 +83,7 @@ self.addEventListener('fetch', function (event) {
     if (event.request.method !== 'GET') {
         ServiceWorkerSays(
             "fetch event was ignored. Only the method " +
-            "GET can be use for requesting a fetch not " + event.request.method +
-            " with url " + event.request.url);
+            "GET can be use for requesting a fetch not " + event.request.method);
     } else {
         event.respondWith(
             caches.match(event.request).then(function (cached) {
